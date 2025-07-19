@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Deployment Approval</title> 
+<style> 
+        body { 
+            background: #f0f2f5; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+        } 
+
+  
+
+        .container { 
+            background: #ffffff; 
+            padding: 30px 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+            text-align: center; 
+        } 
+
+  
+
+        h2 { 
+            margin-bottom: 20px; 
+            color: #333333; 
+        } 
+
+  
+
+        button { 
+            padding: 12px 25px; 
+            margin: 10px; 
+            font-size: 16px; 
+            font-weight: 600; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        } 
+
+  
+
+        .approve { 
+            background-color: #4CAF50; 
+            color: white; 
+        } 
+
+  
+
+        .approve:hover { 
+            background-color: #45a049; 
+        } 
+
+  
+
+        .abort { 
+            background-color: #f44336; 
+            color: white; 
+        } 
+
+  
+
+        .abort:hover { 
+            background-color: #d32f2f; 
+        } 
+
+  
+
+        @media (max-width: 480px) { 
+            .container { 
+                width: 90%; 
+            } 
+
+  
+
+            button { 
+                width: 100%; 
+                margin: 10px 0; 
+            } 
+        } 
+</style> 
+</head> 
+<body> 
+<div class="container"> 
+<h2>Do you approve the deployment?</h2> 
+<form method="POST" action="decision.php"> 
+<button type="submit" name="decision" value="approve" class="approve">✅ Approve</button> 
+<button type="submit" name="decision" value="abort" class="abort">❌ Abort</button> 
+</form> 
+</div> 
+</body> 
+</html> 
